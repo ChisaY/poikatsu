@@ -591,5 +591,10 @@ setInterval(()=>{
 
 render();
 </script>
+<script>
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('/poikatsu/sw.js').then(r=>console.log('SW registered')).catch(e=>console.log('SW error',e));
+}
+</script>
 </body>
 </html>
